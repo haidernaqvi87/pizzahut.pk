@@ -1,5 +1,5 @@
-package shop.pizzas.triangle;
-import shop.Pizza;
+package shop.items.pizza.triangle;
+import shop.items.pizza.Pizza;
 
 public class TriangleFajita extends Pizza {
 

@@ -3,7 +3,7 @@ package shop.factory;
 public class PizzaFactoryProducer {
 
     public static AbstractFactory getFactory(String shapeType) {
-        switch (shapeType){
+        switch (shapeType) {
             case "Rounded":
                 return new RoundedPizzaFactory();
             case "Square":
@@ -11,9 +11,7 @@ public class PizzaFactoryProducer {
             case "Triangle":
                 return new TrianglePizzaFactory();
             default:
-                throw new IllegalStateException(
-                        "We dont have that pizza");
+                throw new IllegalStateException("We dont have that shape");
         }
-
     }
 }

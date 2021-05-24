@@ -1,9 +1,9 @@
-package shop.toppings;
+package shop.items.pizza.toppings;
 
-import shop.interfaces.Topping;
+import shop.items.pizza.Topping;
 
 public class Sausage implements Topping {
-    private String name = "Ketchup";
+    private String name = "Sausage";
     private double price = 30.0;
 
 

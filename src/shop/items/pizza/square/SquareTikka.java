@@ -1,5 +1,5 @@
-package shop.pizzas.square;
-import shop.Pizza;
+package shop.items.pizza.square;
+import shop.items.pizza.Pizza;
 
 public class SquareTikka extends Pizza {
 

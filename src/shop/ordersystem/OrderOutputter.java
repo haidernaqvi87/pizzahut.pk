@@ -1,7 +1,9 @@
 package shop.ordersystem;
 
-import shop.Pizza;
-import shop.interfaces.Topping;
+import shop.calculator.SumCalculator;
+import shop.items.Item;
+import shop.items.pizza.Topping;
+import shop.items.pizza.Pizza;
 
 public class OrderOutputter {
     Order order;
@@ -11,13 +13,21 @@ public class OrderOutputter {
     }
 
     public void displayText(){
-        for (Pizza item: order.getItems()) {
+        for (Item item: order.getItems()) {
             System.out.println(""+item.getName()+ ":" +item.getPrice() );
 
-            for (Topping topping: item.getToppings()) {
-                System.out.println(""+topping.getName()+ ":" +topping.getPrice() );
+            if (item instanceof Pizza) {
+                Pizza pizza = (Pizza) item;
+                for (Topping topping: pizza.getToppings()) {
+                    System.out.println(""+topping.getName()+ ":" +topping.getPrice() );
+                }
             }
         }
+        SumCalculator sumCalculator = new SumCalculator();
+        double sum = sumCalculator.orderTotal(order);
 
+        System.out.println("----------------------------");
+        System.out.println("|   Order Total: "+sum+"    |");
+        System.out.println("----------------------------");
     }
 }

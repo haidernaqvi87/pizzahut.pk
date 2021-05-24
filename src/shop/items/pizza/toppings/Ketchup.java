@@ -1,5 +1,5 @@
-package shop.toppings;
-import shop.interfaces.Topping;
+package shop.items.pizza.toppings;
+import shop.items.pizza.Topping;
 
 public class Ketchup implements Topping {
     private String name = "Ketchup";

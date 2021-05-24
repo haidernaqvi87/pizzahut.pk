@@ -1,8 +1,8 @@
 package shop.factory;
 
-import shop.Pizza;
-import shop.pizzas.rounded.RoundedFajita;
-import shop.pizzas.rounded.RoundedTikka;
+import shop.items.pizza.Pizza;
+import shop.items.pizza.rounded.RoundedFajita;
+import shop.items.pizza.rounded.RoundedTikka;
 
 public class RoundedPizzaFactory implements AbstractFactory {
 

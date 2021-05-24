@@ -1,5 +1,5 @@
-package shop.pizzas.rounded;
-import shop.Pizza;
+package shop.items.pizza.rounded;
+import shop.items.pizza.Pizza;
 
 public class RoundedFajita extends Pizza {
 

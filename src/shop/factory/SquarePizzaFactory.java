@@ -1,8 +1,8 @@
 package shop.factory;
 
-import shop.Pizza;
-import shop.pizzas.square.SquareFajita;
-import shop.pizzas.square.SquareTikka;
+import shop.items.pizza.Pizza;
+import shop.items.pizza.square.SquareFajita;
+import shop.items.pizza.square.SquareTikka;
 
 public class SquarePizzaFactory implements AbstractFactory {
 

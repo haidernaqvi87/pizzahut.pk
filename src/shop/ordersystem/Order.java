@@ -1,21 +1,22 @@
 package shop.ordersystem;
 
-import shop.Pizza;
+import shop.items.Item;
+import shop.items.pizza.Pizza;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    List<Pizza> items;
+    List<Item> items;
 
     public Order() {
-        items = new ArrayList<Pizza>();
+        items = new ArrayList<Item>();
     }
 
-    public void addItem(Pizza pizza) {
-        items.add(pizza);
+    public void addItem(Item item) {
+        items.add(item);
     }
 
-    public List<Pizza> getItems(){
+    public List<Item> getItems(){
         return items;
     }
 

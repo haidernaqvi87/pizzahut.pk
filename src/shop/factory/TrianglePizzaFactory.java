@@ -1,7 +1,7 @@
 package shop.factory;
 
-import shop.Pizza;
-import shop.pizzas.triangle.TriangleFajita;
+import shop.items.pizza.Pizza;
+import shop.items.pizza.triangle.TriangleFajita;
 
 public class TrianglePizzaFactory implements AbstractFactory {
 

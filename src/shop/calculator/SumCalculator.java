@@ -1,30 +1,43 @@
 package shop.calculator;
 
-import shop.Pizza;
-import shop.interfaces.Topping;
+import shop.items.Item;
+import shop.items.pizza.Pizza;
+import shop.items.pizza.Topping;
+import shop.ordersystem.Cart;
 import shop.ordersystem.Order;
 
 import java.util.List;
 
 public class SumCalculator {
-    List<Order> orders;
 
-    public SumCalculator( List<Order> orders) {
-        this.orders = orders;
+    public SumCalculator() {}
+
+    public double grandTotal(Cart cart) {
+        double sum = 0;
+        for (Order order: cart.getOrders()) {
+            sum += getSum(order.getItems());
+        }
+        return sum;
     }
 
-    public double grandTotal(){
+    public double orderTotal(Order order) {
+        double sum = getSum(order.getItems());
+        return sum;
+    }
+
+    private double getSum(List<Item> items) {
         double sum = 0;
-
-        for (Order order: orders) {
-            for (Pizza pizza : order.getItems()) {
-                sum += pizza.getPrice();
-
+        for (Item item : items) {
+            sum += item.getPrice();
+            //If itz a pizza and has toppings
+            if (item instanceof Pizza) {
+                Pizza pizza = (Pizza) item;
                 for (Topping topping : pizza.getToppings()) {
                     sum += topping.getPrice();
                 }
             }
         }
+
         return sum;
     }
 
