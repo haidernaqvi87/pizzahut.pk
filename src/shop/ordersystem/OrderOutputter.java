@@ -18,8 +18,9 @@ public class OrderOutputter {
 
             if (item instanceof Pizza) {
                 Pizza pizza = (Pizza) item;
+                System.out.println(pizza.getToppingsCount()+" Toppings added: ");
                 for (Topping topping: pizza.getToppings()) {
-                    System.out.println(""+topping.getName()+ ":" +topping.getPrice() );
+                    System.out.println("     "+topping.getName()+ ":" +topping.getPrice() );
                 }
             }
         }
@@ -27,7 +28,7 @@ public class OrderOutputter {
         double sum = sumCalculator.orderTotal(order);
 
         System.out.println("----------------------------");
-        System.out.println("|   Order Total: "+sum+"    |");
+        System.out.println("|   Order Total:Rs "+sum+"  |");
         System.out.println("----------------------------");
     }
 }

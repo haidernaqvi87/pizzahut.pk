@@ -7,6 +7,4 @@ public class Pepsi extends Drink {
         this.price = 60.0;
         this.type = type;
     }
-
-
 }
