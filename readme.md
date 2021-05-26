@@ -15,9 +15,12 @@ concept of OOP.
 
 *Typecasting
 
+*Static method
+
 Moreover I implemented 2 design patterns
 
 1-Factory Pattern
+
 2-Abstract Factory Pattern
 
 Added datalayer concept as well.
